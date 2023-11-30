@@ -1,0 +1,136 @@
+:root {
+  --StrongCyan: hsl(172, 67%, 45%);
+  --Verydarkcyan: hsl(183, 100%, 15%);
+  --Darkgrayiscyan: hsl(186, 14%, 43%);
+  --Grayishcyan: hsl(184, 14%, 56%);
+  --Lightgrayishcyan: hsl(185, 41%, 84%);
+  --Verylightgrayishcyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Lightgrayishcyan);
+
+}
+
+
+.logo {
+  display: block;
+  margin: 1em auto;
+}
+
+
+.card {
+  display: grid;
+  background-color: var(--White);
+  border-radius: 10px;
+
+}
+
+.input,
+.output {
+  /* border: 2px solid red; */
+  padding: 2em;
+}
+
+.output {
+  background-color: var(--Verydarkcyan);
+  border-radius: 10px;
+  color: var(--White);
+}
+
+.tip-amount,
+.total-person {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.per-person-tags {
+  color: var(--Lightgrayishcyan);
+}
+
+.amounts-figures {
+  color: var(--StrongCyan);
+  font-size: 1.5rem;
+}
+
+.reset-btn {
+  background-color: var(--StrongCyan);
+  color: var(--Verydarkcyan);
+  font-size: 1.5rem;
+  font-family: inherit;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10px;
+  padding: .25em 2em;
+  width: 100%;
+  margin: 1em 0;
+}
+
+.bill-label,
+.people-label {
+  display: flex;
+  background-color: var(--Lightgrayishcyan);
+  width: fit-content;
+  align-items: center;
+  padding: .5em 1em;
+  border-radius: 10px;
+}
+
+.bill-label>input,
+.people-label>input {
+  border: none;
+  text-align: right;
+  background-color: var(--Lightgrayishcyan);
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: var(--Verydarkcyan);
+}
+
+.tip-select {
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(3, minmax(0, 100px));
+  gap: 15px;
+}
+
+.tip-label {
+  background-color: var(--Verydarkcyan);
+  color: var(--Lightgrayishcyan);
+  font-family: inherit;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  padding: 0.25em;
+}
+
+.tip-label:is(:hover, :active, :focus, ) {
+  background-color: var(--StrongCyan);
+  cursor: pointer;
+}
+
+.custom-label {
+  background-color: var(--Lightgrayishcyan);
+}
+
+.custom-label::placeholder {
+  color: var(--Grayishcyan);
+}
+
+@media screen and (min-width: 60rem) {
+  .card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .output {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+  }
+}
