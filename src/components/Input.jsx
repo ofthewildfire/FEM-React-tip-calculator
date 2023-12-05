@@ -18,7 +18,7 @@ function Input(props) {
 					<input
 						// Remember to pass the event its not psychic hun
 						onChange={(e) => props.handleBill(e)}
-						type="numbers"
+						type="text"
 						name="bill"
 						id="bill"
 						value={props.bill}

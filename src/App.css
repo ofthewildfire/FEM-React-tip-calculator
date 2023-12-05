@@ -15,20 +15,20 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--Lightgrayishcyan);
+  max-width: 1440px;
 
 }
 
-
-.logo {
+.logo>svg {
   display: block;
   margin: 1em auto;
 }
-
 
 .card {
   display: grid;
   background-color: var(--White);
   border-radius: 10px;
+  padding: 2em;
 
 }
 
@@ -96,7 +96,7 @@ body {
 .tip-select {
   display: grid;
   place-content: center;
-  grid-template-columns: repeat(3, minmax(0, 100px));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 15px;
 }
 
@@ -126,6 +126,8 @@ body {
 @media screen and (min-width: 60rem) {
   .card {
     grid-template-columns: repeat(2, 1fr);
+    max-width: 960px;
+    margin: 0 auto;
   }
 
   .output {
