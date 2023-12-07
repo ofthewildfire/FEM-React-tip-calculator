@@ -7,7 +7,7 @@ function Input(props) {
 			{/* legit added numbers by accident and its wrong asf but it does that 0 removal on type and i cannot fix that right now. so the wrong type stays */}
 			{/* okay back to text the zero is still a thing idk ...its annoying */}
 			<form>
-				<p>Bill</p>
+				<p className="s-title">Bill</p>
 				<label className="bill-label" htmlFor="bill">
 					<svg xmlns="http://www.w3.org/2000/svg" width="11" height="17">
 						<path
@@ -24,7 +24,7 @@ function Input(props) {
 						value={props.bill}
 					/>
 				</label>
-				<p>Select Tip %</p>
+				<p className="s-title">Select Tip %</p>
 				<div className="tip-select">
 					<button
 						onClick={(e) => props.handleTips(e)}
@@ -75,7 +75,7 @@ function Input(props) {
 						placeholder="Custom"
 					/>
 				</div>
-				<p> Number of People</p>
+				<p className="s-title"> Number of People</p>
 				<label className="people-label" htmlFor="people">
 					<svg xmlns="http://www.w3.org/2000/svg" width="13" height="16">
 						<path

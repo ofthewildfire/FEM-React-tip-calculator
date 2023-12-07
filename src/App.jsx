@@ -8,12 +8,12 @@ import Output from "./components/Output"
 function App() {
 	// Idk I feel like this is a lot of clunky messy wessy :o
 	// keep going, look at it again after its all done, its working chill-tf out
-	const [bill, setBill] = useState("")
+	const [bill, setBill] = useState(0)
 	const [tip, setTip] = useState(0)
 	const [people, setPeople] = useState(0)
 	const [perPersonPrice, setPerPersonPrice] = useState(0)
 	const [perPersonTip, setPerPersonTip] = useState(0)
-	const [billTotal, setBillTotal] = useState(0)
+	// const [billTotal, setBillTotal] = useState(0)
 
 	// When either is clicked/changed i wanted to thing to re-run
 
@@ -21,8 +21,8 @@ function App() {
 		const bill = Number(e.target.value)
 		setBill(bill)
 		const tipAmount = (bill * tip) / 100
-		setBillTotal(bill + tipAmount)
 		setPerPersonPrice((bill + tipAmount) / people)
+		setPerPersonTip(Number(tip / people))
 	}
 
 	function handlePeople(e) {
@@ -30,7 +30,7 @@ function App() {
 		setPeople(people)
 
 		const tipAmount = (bill * tip) / 100
-		setBillTotal(bill + tipAmount)
+		// setBillTotal(bill + tipAmount)
 		setPerPersonPrice((bill + tipAmount) / people)
 	}
 
@@ -40,10 +40,11 @@ function App() {
 		const tipAmount = (bill * tipPercentage) / 100
 
 		setTip(Number(tipAmount.toFixed(2)))
-		setBillTotal(Number((bill + tipAmount).toFixed(2)))
+		// setBillTotal(Number((bill + tipAmount).toFixed(2)))
 
 		if (people !== 0) {
-			setPerPersonTip(Number((tipAmount / people).toFixed(2)))
+			// Changed the tipAmount to tip here
+			setPerPersonTip(Number((tip / people).toFixed(2)))
 			setPerPersonPrice(Number(((bill + tipAmount) / people).toFixed(2)))
 		} else {
 			// Set perPersonTip to zero and perPersonPrice to 0 if people is zero
@@ -93,6 +94,22 @@ function App() {
 					resetState={resetState}
 				/>
 			</Card>
+			<small className="center-me">
+				This is a{" "}
+				<a
+					href="http://frontendmentor.io"
+					target="_blank"
+					rel="noopener noreferrer">
+					Frontendmentor.io
+				</a>{" "}
+				challenge || Completed by{" "}
+				<a
+					href="http://github.com/ofthewildfire"
+					target="_blank"
+					rel="noopener noreferrer">
+					Kay
+				</a>
+			</small>
 		</>
 	)
 }
