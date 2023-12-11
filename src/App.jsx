@@ -70,7 +70,6 @@ function App() {
 		setPeople(0)
 		setPerPersonPrice(0)
 		setPerPersonTip(0)
-		setBillTotal(0)
 	}
 
 	return (
