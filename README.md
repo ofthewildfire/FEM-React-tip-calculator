@@ -10,7 +10,6 @@ Frontendmentor.io challenge. 💰
 - [Introduction](#introduction)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Issues](#issues)
 - [Contributing](#contributing)
