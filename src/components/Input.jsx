@@ -8,7 +8,7 @@ function Input(props) {
 			{/* okay back to text the zero is still a thing idk ...its annoying */}
 			<form>
 				<p className="s-title">Bill</p>
-				<label className="bill-label" htmlFor="bill">
+				<label className="bill-label" id="bill-input" htmlFor="bill">
 					<svg xmlns="http://www.w3.org/2000/svg" width="11" height="17">
 						<path
 							fill="#9EBBBD"
@@ -21,6 +21,7 @@ function Input(props) {
 						type="text"
 						name="bill"
 						id="bill"
+						aria-labelledby="bill-input"
 						value={props.bill}
 					/>
 				</label>
@@ -66,17 +67,19 @@ function Input(props) {
 						value={50}>
 						50%
 					</button>
+					<label htmlFor="custom" id="custom-tip" hidden></label>
 					<input
 						onChange={(e) => props.handleTips(e)}
-						type="text"
+						type="number"
 						name="custom"
 						id="custom"
 						className="tip-label custom-label"
 						placeholder="Custom"
+						aria-labelledby="custom-tip"
 					/>
 				</div>
 				<p className="s-title"> Number of People</p>
-				<label className="people-label" htmlFor="people">
+				<label className="people-label" id="people-input" htmlFor="people">
 					<svg xmlns="http://www.w3.org/2000/svg" width="13" height="16">
 						<path
 							fill="#9EBBBD"
@@ -89,6 +92,7 @@ function Input(props) {
 						type="text"
 						name="people"
 						id="people"
+						aria-labelledby="people-input"
 					/>
 				</label>
 			</form>
