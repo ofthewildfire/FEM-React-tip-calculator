@@ -18,9 +18,9 @@ Frontendmentor.io challenge. 💰
 
 ## Introduction
 
-Welcome to the Tip Calculator! This React app is designed to make splitting
-bills and calculating tips a breeze. It's a straightforward tool that leverages
-React's useState and useEffect hooks.
+This React app is intented to make splitting bills and calculating tips a
+easier. It's a straightforward tool that leverages React's useState and
+useEffect hooks. I used React to practice React.
 
 ## Features
 
@@ -33,27 +33,7 @@ React's useState and useEffect hooks.
 
 - React
 - HTML/CSS
-
-## Getting Started
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/your-username/tip-calculator-react.git
-cd tip-calculator-react
-```
-
-2. Install dependencies:
-
-```bash
-npm install
-```
-
-3. Run app:
-
-```bash
-npm run dev
-```
+- useState / useEffect shenanigans.
 
 ## Usage
 
@@ -72,4 +52,7 @@ Currently, the app doesn't support decimal numbers in the bill input.
 ### useEffect Issue
 
 If you are facing issues with the `useEffect` not updating the tip per person
-state this known by me and I am trying to fix it.
+state this known by me and I am trying to fix it. However it does update the
+bill per person, best I have been able to deduce, it seems to update completely
+wrong. So, when you change the bill just click another tip button and click back
+to the one you want and it will be correct.
