@@ -13,9 +13,6 @@ function App() {
 	const [people, setPeople] = useState(0)
 	const [perPersonPrice, setPerPersonPrice] = useState(0)
 	const [perPersonTip, setPerPersonTip] = useState(0)
-	// const [billTotal, setBillTotal] = useState(0)
-
-	// When either is clicked/changed i wanted to thing to re-run
 
 	function handleBill(e) {
 		const bill = Number(e.target.value)
@@ -30,7 +27,6 @@ function App() {
 		setPeople(people)
 
 		const tipAmount = (bill * tip) / 100
-		// setBillTotal(bill + tipAmount)
 		setPerPersonPrice((bill + tipAmount) / people)
 	}
 
@@ -40,7 +36,6 @@ function App() {
 		const tipAmount = (bill * tipPercentage) / 100
 
 		setTip(Number(tipAmount.toFixed(2)))
-		// setBillTotal(Number((bill + tipAmount).toFixed(2)))
 
 		if (people !== 0) {
 			// Changed the tipAmount to tip here
