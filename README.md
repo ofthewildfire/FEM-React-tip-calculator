@@ -2,6 +2,8 @@
 
 ![Tip Calculator Screenshot](./public/Screenshot%202023-12-07%20at%2014-00-26%20Vite%20React.png)
 
+![Live link](https://fem-react-tip-calculator.vercel.app/)
+
 A simple React app to calculate tips and split the bill among friends. This is a
 Frontendmentor.io challenge. 💰
 
