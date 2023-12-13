@@ -44,7 +44,7 @@ function App() {
 
 		if (people !== 0) {
 			// Changed the tipAmount to tip here
-			setPerPersonTip(Number((tip / people).toFixed(2)))
+			setPerPersonTip(Number((tipAmount / people).toFixed(2)))
 			setPerPersonPrice(Number(((bill + tipAmount) / people).toFixed(2)))
 		} else {
 			// Set perPersonTip to zero and perPersonPrice to 0 if people is zero
